@@ -1,1 +1,39 @@
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
+
+function start()
+{
+}
+
+function stop()
+{
+}
+
+function restart()
+{
+}
+
+function status()
+{
+}
+
+functin tidy()
+{
+}
+
+function is_running()
+{
+}
+
+if ! [ $# -eq 1 ]; then
+    echo "Usage: $0 [start|stop|restart|tidy]"
+    exit 1
+fi
+
+case "$1" in
+     start)       start    ;;
+     stop)        stop     ;;
+     restart)     restart  ;;
+     status)      status   ;;
+     tidy)        tidy     ;;
+     *) exit 0;
+esac
