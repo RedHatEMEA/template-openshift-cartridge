@@ -25,7 +25,7 @@ function is_running()
 }
 
 if ! [ $# -eq 1 ]; then
-    echo "Usage: $0 [start|stop|restart|tidy]"
+    echo "Usage: $0 [start|stop|restart|status|tidy]"
     exit 1
 fi
 
