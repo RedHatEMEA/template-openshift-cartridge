@@ -17,7 +17,7 @@ function status()
 {
 }
 
-functin tidy()
+function tidy()
 {
 }
 
@@ -25,6 +25,7 @@ function is_running()
 {
 }
 
+# Ensure arguments.
 if ! [ $# -eq 1 ]; then
     echo "Usage: $0 [start|stop|restart|status|tidy]"
     exit 1
