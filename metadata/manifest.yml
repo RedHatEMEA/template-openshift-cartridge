@@ -1,0 +1,42 @@
+---
+Name: template
+Cartridge-Short-Name: TEMPLATE
+Architecture: noarch
+Display-Name: Template Cartridge 0.0.1
+Description: This is a template cartridge structure. Replace the relevant aspects of the manifest with the content you need, based on guidance from the OpenShift Cartridge Developers Guide
+Version: '0.0.1'
+Cartridge-Version: 0.0.1
+Compatible-Versions: []
+Cartridge-Vendor: bholmes
+License: GPL
+Vendor: bholmes
+Categories:
+- java
+- web_framework
+Website: https://github.com/RedHatEMEA/template-openshift-cartridge
+Help-Topics:
+  Developers Guide: http://openshift.github.io/documentation/oo_cartridge_developers_guide.html
+Provides:
+  - template
+Publishes:
+  get-internal-uri:
+    Type: NET_TCP:http
+Subscribes:
+  set-env:
+    Type: ENV:*
+    Required: false
+Scaling:
+  Min: 1
+  Max: -1
+Endpoints:
+- Private-IP-Name: IP
+  Private-Port-Name: HTTP_PORT
+  Private-Port: 8080
+  Public-Port-Name: HTTP_PROXY_PORT
+  Protocols:
+  - http
+  Options:
+    primary: true
+  Mappings:
+  - Frontend: ''
+    Backend: ''
