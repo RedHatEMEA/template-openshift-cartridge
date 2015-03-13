@@ -10,8 +10,6 @@ locked_files:
 - metadata/
 - metadata/*
 - template/
-- usr/
-- usr/*
 processed_templates:
 - '**/*.erb'
 build_dependency_dirs:
